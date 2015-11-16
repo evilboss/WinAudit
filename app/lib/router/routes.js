@@ -1,8 +1,12 @@
 Router.route('/', {
-  name: 'home'
+  name: 'home',
+  controller: 'HomeController',
+  action:'action'
 });
 
-Router.route('/dashboard', {
-  name: 'dashboard',
-  controller: 'DashboardController'
+
+Router.route('/leaderboard', {
+  name: 'leaderboard',
+  controller: 'HomeController',
+  action:'leaderboard'
 });

@@ -3,3 +3,6 @@
  *  this.ready();
  * });
  */
+Meteor.publish("allPlayers", function(){
+    return Players.find();
+});
