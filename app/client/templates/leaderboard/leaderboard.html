@@ -1,0 +1,26 @@
+<template name="Leaderboard">
+    <h1 class="title">Leaderboard</h1>
+    <div class="subtitle">Select a scientist to give them points</div>
+    <ol class="leaderboard">
+        {{#each players}}
+            {{> player}}
+        {{/each}}
+    </ol>
+
+    {{#if selectedName}}
+        <div class="details">
+            <div class="name">{{selectedName}}</div>
+            <button class="inc">Add 5 points</button>
+        </div>
+    {{else}}
+        <div class="message">Click a player to select</div>
+    {{/if}}
+</template>
+
+<template name="player">
+    waaa
+    <li class="player {{selected}}">
+        <span class="name">{{name}}</span>
+        <span class="score">{{score}}</span>
+    </li>
+</template>
