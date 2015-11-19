@@ -1,11 +1,12 @@
 HomeController = RouteController.extend({
   layoutTemplate: 'appLayout',
 
-  subscriptions: function() {
-
+  waitOn: function() {
+    this.subscribe('allPlayers');
   },
 
   data: {
+    Players: Players.find()
   },
   action: function() {
     this.render('Home');

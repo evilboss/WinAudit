@@ -9,7 +9,9 @@ Template.Leaderboard.events({
 /* Leaderboard: Helpers */
 /*****************************************************************************/
 Template.Leaderboard.helpers({
-
+    players: function(){
+        return Players.find().fetch();
+    }
 });
 
 /*****************************************************************************/
